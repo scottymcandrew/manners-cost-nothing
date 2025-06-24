@@ -1,0 +1,338 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --success-color: #27ae60;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --background-light: #ecf0f1;
+    --background-white: #ffffff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--background-white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    padding: 1rem 0;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Main Message Section */
+.main-message {
+    padding: 3rem 0;
+}
+
+.message-card {
+    background-color: var(--background-white);
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: var(--shadow);
+}
+
+.message-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.message-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.key-point {
+    background-color: #fef9e7;
+    border-left: 4px solid var(--accent-color);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.key-point ul {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.key-point li {
+    margin-bottom: 0.5rem;
+}
+
+/* Better Approach Section */
+.better-approach {
+    padding: 3rem 0;
+    background-color: var(--background-white);
+}
+
+.better-approach h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.approach-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--background-light);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.approach-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.approach-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* Manners Matter Section */
+.manners-matter {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+.quote-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 1rem 2rem;
+}
+
+blockquote::before,
+blockquote::after {
+    content: '"';
+    font-size: 4rem;
+    color: var(--secondary-color);
+    opacity: 0.3;
+    position: absolute;
+}
+
+blockquote::before {
+    top: -20px;
+    left: -20px;
+}
+
+blockquote::after {
+    bottom: -40px;
+    right: -20px;
+}
+
+.emphasis {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* Examples Section */
+.examples {
+    padding: 3rem 0;
+    background-color: var(--background-white);
+}
+
+.examples h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.example {
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.example.good {
+    background-color: #d5f4e6;
+    border: 2px solid var(--success-color);
+}
+
+.example.bad {
+    background-color: #fadbd8;
+    border: 2px solid var(--accent-color);
+}
+
+.example h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.example p {
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Final Thoughts Section */
+.final-thoughts {
+    padding: 3rem 0;
+}
+
+.thoughts-card {
+    background-color: var(--background-white);
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.thoughts-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.thoughts-card p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.signature {
+    font-style: italic;
+    color: var(--text-light);
+    margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .message-card {
+        padding: 2rem;
+    }
+    
+    blockquote {
+        font-size: 1.4rem;
+    }
+    
+    .examples-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-card,
+.approach-card,
+.example,
+.thoughts-card {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
